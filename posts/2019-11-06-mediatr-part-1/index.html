@@ -164,11 +164,9 @@
 
 <p>در CQRS متد‌های برنامه به 2 بخش Read و Write تقسیم می‌شوند. بخش‌هایی که State کلی برنامه ( شامل Database, Cookie, Session, LocalStorage, Memory و &hellip; ) را تغییر می‌دهند، Command و بخش‌هایی که صرفا جنبه خواندنی دارند و وضعیت سیستم را تغییر نمی‌دهند، مثل خواندن و نشان دادن اطلاعات از دیتابیس، Query می‌نامند.</p>
 
-<ul>
-<li><strong>نکته :</strong> Naming Convention مورد استفاده برای Command‌‌ها به صورت دستوری است و کار Command در نام آن مشخص است؛ مثال : RegisterUser, SendForgottenPasswordEmail, PlaceOrder<br /></li>
-</ul>
+<p><strong>*</strong> <strong>نکته :</strong> Naming Convention مورد استفاده برای Command‌‌ها به صورت دستوری است و کار Command در نام آن مشخص است؛ مثال : RegisterUser, SendForgottenPasswordEmail, PlaceOrder</p>
 
-<hr />
+<p><br></p>
 
 <p><strong>مزایا:</strong></p>
 
@@ -188,9 +186,7 @@
 
 <p>Event‌ها می‌توانند چندین Consumer داشته باشند؛ بنابراین می‌توانیم یک EventHandler را برای UserRegistered بنویسیم که Email ارسال کند و EventHandler دیگری ایجاد کنیم که Notification ای را برای کاربر بفرستد.</p>
 
-<ul>
-<li><strong>نکته :</strong> Naming Convention مورد استفاده برای Event‌ها به صورت گذشته‌است و خبر یک کار، که قبلا انجام شده است را می‌دهد؛ مثال : UserRegistered, OrderPlaced</li>
-</ul>
+<p><strong>*</strong> <strong>نکته :</strong> Naming Convention مورد استفاده برای Event‌ها به صورت گذشته‌است و خبر یک کار، که قبلا انجام شده است را می‌دهد؛ مثال : UserRegistered, OrderPlaced</p>
 
 <hr />
 
@@ -204,12 +200,7 @@
 
 <p>روش دیگری وجود دارد که بجای بروزرسانی مداوم state جاری، تمام Event هایی که در آن تراکنشی داخل سیستم رخ داده و این تراکنش State برنامه را تحت تاثیر خود قرار داده‌است، داخل یک دیتابیس اضافه نماییم. در این صورت بدلیل داشتن تمام رویدادهای اتفاق افتاده‌ی در برنامه، می‌توان وضعیت جاری سیستم را شبیه سازی و متوجه شد.</p>
 
-<ul>
-<li>در این سری آموزشی از دیتابیس <a href="https://eventstore.org/">Event Store</a> برای پیاده سازی Event Sourcing استفاده خواهیم کرد.
-&mdash;&mdash;&mdash;-</li>
-</ul>
-
-<p>در مقاله‌ی بعدی، امکانات فریمورک MediatR را بررسی خواهیم کرد.</p>
+<p><strong>*</strong> در این سری آموزشی از دیتابیس <a href="https://eventstore.org/">Event Store</a> برای پیاده سازی Event Sourcing استفاده خواهیم کرد.</p>
 
 </div><hr>
             <div class="footer">
