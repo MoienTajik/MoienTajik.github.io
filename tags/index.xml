@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Moien Tajik&#39;s Blog | وبلاگ معین تاجیک</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fa</language>
-    <lastBuildDate>Wed, 06 Nov 2019 23:00:00 +0330</lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2019 23:20:00 +0330</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>CQRS</title>
       <link>/tags/cqrs/</link>
-      <pubDate>Wed, 06 Nov 2019 23:00:00 +0330</pubDate>
+      <pubDate>Wed, 06 Nov 2019 23:20:00 +0330</pubDate>
       
       <guid>/tags/cqrs/</guid>
       <description></description>
@@ -23,7 +23,7 @@
     <item>
       <title>DesignPatterns</title>
       <link>/tags/designpatterns/</link>
-      <pubDate>Wed, 06 Nov 2019 23:00:00 +0330</pubDate>
+      <pubDate>Wed, 06 Nov 2019 23:20:00 +0330</pubDate>
       
       <guid>/tags/designpatterns/</guid>
       <description></description>
@@ -32,7 +32,7 @@
     <item>
       <title>EventSourcing</title>
       <link>/tags/eventsourcing/</link>
-      <pubDate>Wed, 06 Nov 2019 23:00:00 +0330</pubDate>
+      <pubDate>Wed, 06 Nov 2019 23:20:00 +0330</pubDate>
       
       <guid>/tags/eventsourcing/</guid>
       <description></description>
@@ -41,7 +41,7 @@
     <item>
       <title>Mediator</title>
       <link>/tags/mediator/</link>
-      <pubDate>Wed, 06 Nov 2019 23:00:00 +0330</pubDate>
+      <pubDate>Wed, 06 Nov 2019 23:20:00 +0330</pubDate>
       
       <guid>/tags/mediator/</guid>
       <description></description>
@@ -50,7 +50,7 @@
     <item>
       <title>MediatR</title>
       <link>/tags/mediatr/</link>
-      <pubDate>Wed, 06 Nov 2019 23:00:00 +0330</pubDate>
+      <pubDate>Wed, 06 Nov 2019 23:20:00 +0330</pubDate>
       
       <guid>/tags/mediatr/</guid>
       <description></description>

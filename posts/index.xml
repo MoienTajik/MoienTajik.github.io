@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Moien Tajik&#39;s Blog | وبلاگ معین تاجیک</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fa</language>
-    <lastBuildDate>Wed, 06 Nov 2019 23:00:00 +0330</lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2019 23:20:00 +0330</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>پیاده سازی CQRS توسط MediatR - قسمت پنجم</title>
+      <link>/posts/2019-11-06-mediatr-part-5/</link>
+      <pubDate>Wed, 06 Nov 2019 23:20:00 +0330</pubDate>
+      
+      <guid>/posts/2019-11-06-mediatr-part-5/</guid>
+      <description>کدهای این قسمت به‌روزرسانی شده و از این ریپازیتوری قابل دسترسی است.
+Event Sourcing در این قسمت قصد داریم تا اطلاعات Command‌های خود را بعد از Process، داخل یک دیتابیس Append-Only ذخیره کنیم. با استفاده از این روش میتوانیم بفهمیم در یک تاریخ مشخص، با چه ورودی‌هایی ( Request )، چه جواب ( Response ) ای در آن لحظه از برنامه برگشت داده شده‌ است.
+
+برای پیاده سازی Event Sourcing از دیتابیس EventStore که سورس آن نیز در گیتهاب قابل دسترسی است، استفاده خواهیم کرد.</description>
+    </item>
     
     <item>
       <title>پیاده سازی CQRS توسط MediatR - قسمت چهارم</title>
