@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>/posts/2019-11-06-mediatr-part-1/</loc>
+    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>/posts/2019-01-19-mediator-design-pattern/</loc>
     <lastmod>2019-01-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -24,7 +31,28 @@
   </url>
   
   <url>
+    <loc>/tags/cqrs/</loc>
+    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>/tags/csharp/</loc>
+    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/designpatterns/</loc>
+    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/eventsourcing/</loc>
     <lastmod>2019-10-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -46,6 +74,20 @@
   
   <url>
     <loc>/tags/internals/</loc>
+    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mediator/</loc>
+    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mediatr/</loc>
     <lastmod>2019-10-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -82,20 +124,6 @@
   <url>
     <loc>/tags/</loc>
     <lastmod>2019-10-16T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/designpatterns/</loc>
-    <lastmod>2019-01-19T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/mediator/</loc>
-    <lastmod>2019-01-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

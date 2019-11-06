@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DesignPatterns on Moien Tajik&#39;s Blog | وبلاگ معین تاجیک</title>
-    <link>/tags/designpatterns/</link>
-    <description>Recent content in DesignPatterns on Moien Tajik&#39;s Blog | وبلاگ معین تاجیک</description>
+    <title>CQRS on Moien Tajik&#39;s Blog | وبلاگ معین تاجیک</title>
+    <link>/tags/cqrs/</link>
+    <description>Recent content in CQRS on Moien Tajik&#39;s Blog | وبلاگ معین تاجیک</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fa</language>
     <lastBuildDate>Wed, 16 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/designpatterns/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/cqrs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,17 +19,6 @@
       <guid>/posts/2019-11-06-mediatr-part-1/</guid>
       <description>پیاده سازی الگو CQRS هرچند با فریمورک آماده‌ای همچون SimpleCQRS ، دارای پیچیدگی زیاد و باعث نوشتن حجم زیادی کد می‌شود.
 فریمورک MediatR توسط توسعه دهنده کتابخانه‌ی محبوب AutoMapper ایجاد شده‌است. این فریمورک پیاده سازی کاملی از الگوی طراحی Mediator در NET. است که داخل خود، تمام پیچیدگی‌های پیاده سازی CQRS را Abstract کرده و با حداقل کد ممکن، می‌توانید براحتی CQRS را داخل پروژه‌ خود پیاده سازی کنید.</description>
-    </item>
-    
-    <item>
-      <title>الگوهای طراحی - Mediator</title>
-      <link>/posts/2019-01-19-mediator-design-pattern/</link>
-      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/2019-01-19-mediator-design-pattern/</guid>
-      <description>الگوی طراحی Mediator نحوه ی ارتباط چند object را در داخل خود کپسوله و مشخص میکند.
-یک مثال واقعی از این الگو :
-برج مراقبت یک فرودگاه را در نظر بگیرید. این بخش از تمامی هواپیماهایی که تردد میکنند باخبر بوده و وظیفه مدیریت پرواز آن ها را بر عهده داشته و اجازه فرود و پرواز آن ها را صادر میکند. در صورتی که اجازه فرود داده نشود ، هواپیما اجازه به نشستن ندارد.</description>
     </item>
     
   </channel>

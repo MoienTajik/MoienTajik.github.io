@@ -21,11 +21,38 @@
     </item>
     
     <item>
+      <title>CQRS</title>
+      <link>/tags/cqrs/</link>
+      <pubDate>Wed, 16 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/cqrs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>CSharp</title>
       <link>/tags/csharp/</link>
       <pubDate>Wed, 16 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/csharp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DesignPatterns</title>
+      <link>/tags/designpatterns/</link>
+      <pubDate>Wed, 16 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/designpatterns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>EventSourcing</title>
+      <link>/tags/eventsourcing/</link>
+      <pubDate>Wed, 16 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/eventsourcing/</guid>
       <description></description>
     </item>
     
@@ -57,6 +84,24 @@
     </item>
     
     <item>
+      <title>Mediator</title>
+      <link>/tags/mediator/</link>
+      <pubDate>Wed, 16 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/mediator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MediatR</title>
+      <link>/tags/mediatr/</link>
+      <pubDate>Wed, 16 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/mediatr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Single</title>
       <link>/tags/single/</link>
       <pubDate>Wed, 16 Oct 2019 00:00:00 +0000</pubDate>
@@ -71,24 +116,6 @@
       <pubDate>Wed, 16 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/singleordefault/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DesignPatterns</title>
-      <link>/tags/designpatterns/</link>
-      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/designpatterns/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mediator</title>
-      <link>/tags/mediator/</link>
-      <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/mediator/</guid>
       <description></description>
     </item>
     
