@@ -6,10 +6,20 @@
     <description>Recent content in CQRS on Moien Tajik&#39;s Blog | وبلاگ معین تاجیک</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fa</language>
-    <lastBuildDate>Wed, 06 Nov 2019 21:00:00 +0330</lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2019 22:00:00 +0330</lastBuildDate>
     
 	<atom:link href="/tags/cqrs/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>پیاده سازی CQRS توسط MediatR - قسمت سوم</title>
+      <link>/posts/2019-11-06-mediatr-part-3/</link>
+      <pubDate>Wed, 06 Nov 2019 22:00:00 +0330</pubDate>
+      
+      <guid>/posts/2019-11-06-mediatr-part-3/</guid>
+      <description>در قسمت قبلی روش استفاده از IRequest و IRequestHandler را در MediatR که نقش پیاده سازی Command/Query را در CQRS بر عهده دارند، بررسی کردیم. کدهای این قسمت در این ریپازیتوری به‌روزرسانی شده و قابل دسترسی است.
+Command ما که نقش ایجاد یک مشتری را داشت ( CreateCustomerCommand ) ، هیچ Validation ای برای اعتبار سنجی مقادیر ورودی از سمت کاربر را ندارد و کاربر با هر مقادیری میتواند این Command را فراخوانی کند.</description>
+    </item>
     
     <item>
       <title>پیاده سازی CQRS توسط MediatR - قسمت دوم</title>
