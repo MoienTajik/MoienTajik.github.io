@@ -15,7 +15,7 @@
 <meta content="پیاده سازی CQRS توسط MediatR - قسمت سوم - Moien Tajik&#39;s Blog | وبلاگ معین تاجیک"
  property="og:title">
 <meta content="در این سری مقالات به پیاده سازی الگوی طراحی CQRS توسط کتابخانه MediatR میپردازیم." property="og:description">
-<meta content="/img/posts/2019-11-06-MediatR-Part-3/PubSub.jpg" property="og:image">
+<meta content="/img/posts/2019-02-02-MediatR-Part-3/PubSub.jpg" property="og:image">
 <!-- CSS -->
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i|Roboto+Mono:300,300i,400,400i" rel="stylesheet">
 <style media="print">
@@ -152,11 +152,11 @@
   
   
 
-<p>در <a href="https://moien.dev/posts/2019-11-06-mediatr-part-2">قسمت قبلی</a> روش استفاده از IRequest و IRequestHandler را در MediatR که نقش پیاده سازی Command/Query را در CQRS بر عهده دارند، بررسی کردیم. کدهای این قسمت در این <a href="https://github.com/MoienTajik/MediatrTutorial">ریپازیتوری</a> به‌روزرسانی شده و قابل دسترسی است.</p>
+<p>در <a href="https://moien.dev/posts/2019-01-27-mediatr-part-2">قسمت قبلی</a> روش استفاده از IRequest و IRequestHandler را در MediatR که نقش پیاده سازی Command/Query را در CQRS بر عهده دارند، بررسی کردیم. کدهای این قسمت در این <a href="https://github.com/MoienTajik/MediatrTutorial">ریپازیتوری</a> به‌روزرسانی شده و قابل دسترسی است.</p>
 
 <hr />
 
-<p><img src="/img/posts/2019-11-06-MediatR-Part-3/FluentValidation.jpg" alt="Fluent Validation" width="270" style="margin:auto;">
+<p><img src="/img/posts/2019-02-02-MediatR-Part-3/FluentValidation.jpg" alt="Fluent Validation" width="270" style="margin:auto;">
 <br></p>
 
 <p>Command ما که نقش ایجاد یک مشتری را داشت ( CreateCustomerCommand ) ، هیچ Validation ای برای اعتبار سنجی مقادیر ورودی از سمت کاربر را ندارد و کاربر با هر مقادیری میتواند این Command را فراخوانی کند. در این قسمت با استفاده از کتابخانه <a href="https://github.com/JeremySkinner/FluentValidation">Fluent Validation</a>  امکان اعتبار سنجی را به Command‌های خود اضافه میکنیم.</p>
@@ -206,7 +206,7 @@
 
 <h3 id="events">Events</h3>
 
-<p><img src="/img/posts/2019-11-06-MediatR-Part-3/PubSub.jpg" alt="Observer Pattern" style="margin:auto;">
+<p><img src="/img/posts/2019-02-02-MediatR-Part-3/PubSub.jpg" alt="Observer Pattern" style="margin:auto;">
 <br></p>
 
 <p>فرض کنید میخواهیم در صورت موفقیت آمیز بودن ثبت نام یک مشتری، برای او ایمیلی ارسال کنیم. فرستادن ایمیل وظیفه CreateCustomerCommand نیست و در صورت افزودن منطق ارسال ایمیل به Command، اصل <a href="http://principles-wiki.net/principles:single_responsibility_principle">SRP</a> را نقض کرده‌ایم.</p>
@@ -266,7 +266,7 @@
 }
 </code></pre>
 
-<p>در نهایت کافیست داخل CreateCustomerCommandHandler که در <a href="https://moien.dev/posts/2019-11-06-mediatr-part-2">قسمت قبل</a> آن را ایجاد کردیم، متد Handle را ویرایش و با استفاده از متد Publish موجود در اینترفیس IMediator، این Event را Raise کنیم :</p>
+<p>در نهایت کافیست داخل CreateCustomerCommandHandler که در <a href="https://moien.dev/posts/2019-01-27-mediatr-part-2">قسمت قبل</a> آن را ایجاد کردیم، متد Handle را ویرایش و با استفاده از متد Publish موجود در اینترفیس IMediator، این Event را Raise کنیم :</p>
 
 <pre><code class="language-csharp">public class CreateCustomerCommandHandler : IRequestHandler&lt;CreateCustomerCommand, CustomerDto&gt;
 {

@@ -15,7 +15,7 @@
 <meta content="پیاده سازی CQRS توسط MediatR - قسمت دوم - Moien Tajik&#39;s Blog | وبلاگ معین تاجیک"
  property="og:title">
 <meta content="در این سری مقالات به پیاده سازی الگوی طراحی CQRS توسط کتابخانه MediatR میپردازیم." property="og:description">
-<meta content="/img/posts/2019-11-06-MediatR-Part-2/Hollywood.jpg" property="og:image">
+<meta content="/img/posts/2019-01-27-MediatR-Part-2/Hollywood.jpg" property="og:image">
 <!-- CSS -->
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i|Roboto+Mono:300,300i,400,400i" rel="stylesheet">
 <style media="print">
@@ -183,7 +183,7 @@
 
 <h4 id="irequest">IRequest</h4>
 
-<p>همانطور که در  <a href="https://moien.dev/posts/2019-11-06-mediatr-part-1">مطلب قبل</a>  گفتیم، در CQRS، متدهای برنامه به دو قسمت Command و Query تقسیم میشوند. در MediatR اینترفیسی بنام IRequest ایجاد شده‌ است و تمامی Class‌های Command/Query ما که  <strong>درخواست</strong> انجام کاری را میدهند، از این interface ارث بری خواهند کرد.</p>
+<p>همانطور که در  <a href="https://moien.dev/posts/2019-01-21-mediatr-part-1">مطلب قبل</a>  گفتیم، در CQRS، متدهای برنامه به دو قسمت Command و Query تقسیم میشوند. در MediatR اینترفیسی بنام IRequest ایجاد شده‌ است و تمامی Class‌های Command/Query ما که  <strong>درخواست</strong> انجام کاری را میدهند، از این interface ارث بری خواهند کرد.</p>
 
 <p>دلیل نامگذاری این interface به IRequest این است که ما  <strong>درخواست</strong> افزودن یک مشتری جدید را ایجاد میکنیم و قسمت دیگری از برنامه، وظیفه  <strong>پاسخگویی</strong>  به این درخواست را برعهده خواهد داشت.</p>
 
@@ -238,7 +238,7 @@
 
 <p>در اینجا مفهوم <a href="https://www.yegor256.com/2014/06/09/objects-should-be-immutable.html">immutability</a> بطور کامل رعایت شده است.</p>
 
-<p><img src="/img/posts/2019-11-06-MediatR-Part-2/immutability.jpg" alt="Immutability" width="600" style="margin:auto;"></p>
+<p><img src="/img/posts/2019-01-27-MediatR-Part-2/immutability.jpg" alt="Immutability" width="600" style="margin:auto;"></p>
 
 <hr />
 
@@ -304,7 +304,7 @@ public async Task&lt;IActionResult&gt; CreateCustomer([FromBody] CreateCustomerC
 
 <p>همانطور که میبینید ما در اینجا فقط  <strong>درخواست</strong> فرستاده‌ایم و وظیفه پیدا کردن Handler این درخواست را فریمورک MediatR برعهده گرفته‌است و ما هیچ جایی بطور مستقیم Handler خود را صدا نزده ایم. ( <a href="http://matthewtmead.com/blog/hollywood-principle-dont-call-us-well-call-you-4/">Hollywood Principle: Don&rsquo;t Call Us, We Call You</a> )</p>
 
-<p><img src="/img/posts/2019-11-06-MediatR-Part-2/Hollywood.jpg" alt="Hollywood Principle" width="300" style="margin:auto;"></p>
+<p><img src="/img/posts/2019-01-27-MediatR-Part-2/Hollywood.jpg" alt="Hollywood Principle" width="300" style="margin:auto;"></p>
 
 <p>روند پیاده سازی Query‌ها نیز دقیقا شبیه به Command است و نمونه‌ای از آن داخل ریپازیتوری ذکر شده‌ در ابتدای مطلب وجود دارد.<br />
 اینترفیس IMediator علاوه بر متد Send ، دارای متد دیگری بنام Publish نیز هست که وظیفه Raise کردن Event‌ها را برعهده دارد که در مقالات بعدی از آن استفاده خواهیم کرد.</p>
