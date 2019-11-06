@@ -22,6 +22,17 @@
     </item>
     
     <item>
+      <title>پیاده سازی CQRS توسط MediatR - قسمت دوم</title>
+      <link>/posts/2019-11-06-mediatr-part-2/</link>
+      <pubDate>Wed, 06 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2019-11-06-mediatr-part-2/</guid>
+      <description>در این مطلب قصد داریم به بررسی امکانات داخلی فریمورک MediatR بپردازیم. سورس این قسمت مقاله در این ریپازیتوری قابل دسترسی است.
+نصب و راه اندازی در ابتدا یک پروژه جدید ASP.NET Core از نوع API را ایجاد میکنیم و با استفاده از Nuget Package Manager ، پکیج MediatR را داخل پروژه نصب میکنیم:
+Install-Package MediatR  بعد از نصب نیاز داریم تا نیازمندی‌های این فریمورک را داخل DI Container خود Register کنیم.</description>
+    </item>
+    
+    <item>
       <title>الگوهای طراحی - Mediator</title>
       <link>/posts/2019-01-19-mediator-design-pattern/</link>
       <pubDate>Sat, 19 Jan 2019 00:00:00 +0000</pubDate>
