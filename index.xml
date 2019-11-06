@@ -86,6 +86,17 @@ Install-Package MediatR  بعد از نصب نیاز داریم تا نیازم�
     </item>
     
     <item>
+      <title>API Versioning in ASP.NET Core</title>
+      <link>/posts/2018-11-12-aspnetcore-api-versioning/</link>
+      <pubDate>Fri, 09 Nov 2018 00:00:00 +0330</pubDate>
+      
+      <guid>/posts/2018-11-12-aspnetcore-api-versioning/</guid>
+      <description>حتما درباره الزامات استفاده‌ از API Versioning خوانده ایم. همانطور که میدانیم ، پیاده سازی Versioning در ASP.NET Web API کاری دشوار و زمانبر بود؛ اما در ASP.NET Core انجام تمامی آن مراحل، در یک خط صورت می‌گیرد که در ادامه آن را بررسی میکنیم.
+برای شروع با اجرای این دستور در Package Manager Console، پکیج Microsoft.AspNetCore.Mvc.Versioning را داخل پروژه نصب می‌کنیم:
+Install-Package Microsoft.AspNetCore.Mvc.Versioning  بعد از نصب، کافیست کد زیر را داخل متد ConfigureServices در فایل Startup.</description>
+    </item>
+    
+    <item>
       <title>قیود مسیریابی در ASP.NET Core</title>
       <link>/posts/2018-11-09-aspnetcore-route-constraints/</link>
       <pubDate>Fri, 09 Nov 2018 00:00:00 +0330</pubDate>

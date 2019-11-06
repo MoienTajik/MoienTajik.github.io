@@ -52,6 +52,13 @@
   </url>
   
   <url>
+    <loc>/posts/2018-11-12-aspnetcore-api-versioning/</loc>
+    <lastmod>2018-11-09T00:00:00+03:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>/posts/2018-11-09-aspnetcore-route-constraints/</loc>
     <lastmod>2018-11-09T00:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -171,6 +178,13 @@
   </url>
   
   <url>
+    <loc>/tags/api/</loc>
+    <lastmod>2018-11-09T00:00:00+03:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>/tags/aspnet/</loc>
     <lastmod>2018-11-09T00:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -186,6 +200,13 @@
   
   <url>
     <loc>/tags/routing/</loc>
+    <lastmod>2018-11-09T00:00:00+03:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/versioning/</loc>
     <lastmod>2018-11-09T00:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
