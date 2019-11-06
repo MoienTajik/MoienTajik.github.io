@@ -6,7 +6,7 @@
     <description>Recent content in EventSourcing on Moien Tajik&#39;s Blog | وبلاگ معین تاجیک</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fa</language>
-    <lastBuildDate>Wed, 06 Nov 2019 23:20:00 +0330</lastBuildDate>
+    <lastBuildDate>Sun, 24 Feb 2019 00:00:00 +0330</lastBuildDate>
     
 	<atom:link href="/tags/eventsourcing/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>پیاده سازی CQRS توسط MediatR - قسمت پنجم</title>
       <link>/posts/2019-11-06-mediatr-part-5/</link>
-      <pubDate>Wed, 06 Nov 2019 23:20:00 +0330</pubDate>
+      <pubDate>Sun, 24 Feb 2019 00:00:00 +0330</pubDate>
       
       <guid>/posts/2019-11-06-mediatr-part-5/</guid>
       <description>کدهای این قسمت به‌روزرسانی شده و از این ریپازیتوری قابل دسترسی است.
@@ -26,7 +26,7 @@ Event Sourcing در این قسمت قصد داریم تا اطلاعات Comman
     <item>
       <title>پیاده سازی CQRS توسط MediatR - قسمت چهارم</title>
       <link>/posts/2019-11-06-mediatr-part-4/</link>
-      <pubDate>Wed, 06 Nov 2019 23:00:00 +0330</pubDate>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 +0330</pubDate>
       
       <guid>/posts/2019-11-06-mediatr-part-4/</guid>
       <description>در این قسمت قصد داریم به بررسی Behavior‌ ها در فریمورک MediatR بپردازیم. کدهای این قسمت بروزرسانی و از این ریپازیتوری قابل دسترسی است.
@@ -36,7 +36,7 @@ Event Sourcing در این قسمت قصد داریم تا اطلاعات Comman
     <item>
       <title>پیاده سازی CQRS توسط MediatR - قسمت سوم</title>
       <link>/posts/2019-11-06-mediatr-part-3/</link>
-      <pubDate>Wed, 06 Nov 2019 22:00:00 +0330</pubDate>
+      <pubDate>Sat, 02 Feb 2019 00:00:00 +0330</pubDate>
       
       <guid>/posts/2019-11-06-mediatr-part-3/</guid>
       <description>در قسمت قبلی روش استفاده از IRequest و IRequestHandler را در MediatR که نقش پیاده سازی Command/Query را در CQRS بر عهده دارند، بررسی کردیم. کدهای این قسمت در این ریپازیتوری به‌روزرسانی شده و قابل دسترسی است.
@@ -46,7 +46,7 @@ Command ما که نقش ایجاد یک مشتری را داشت ( CreateCustom
     <item>
       <title>پیاده سازی CQRS توسط MediatR - قسمت دوم</title>
       <link>/posts/2019-11-06-mediatr-part-2/</link>
-      <pubDate>Wed, 06 Nov 2019 21:00:00 +0330</pubDate>
+      <pubDate>Sun, 27 Jan 2019 00:00:00 +0330</pubDate>
       
       <guid>/posts/2019-11-06-mediatr-part-2/</guid>
       <description>در این مطلب قصد داریم به بررسی امکانات داخلی فریمورک MediatR بپردازیم. سورس این قسمت مقاله در این ریپازیتوری قابل دسترسی است.
@@ -57,7 +57,7 @@ Install-Package MediatR  بعد از نصب نیاز داریم تا نیازم�
     <item>
       <title>پیاده سازی CQRS توسط MediatR - قسمت اول</title>
       <link>/posts/2019-11-06-mediatr-part-1/</link>
-      <pubDate>Wed, 06 Nov 2019 20:00:00 +0330</pubDate>
+      <pubDate>Mon, 21 Jan 2019 00:00:00 +0330</pubDate>
       
       <guid>/posts/2019-11-06-mediatr-part-1/</guid>
       <description>پیاده سازی الگو CQRS هرچند با فریمورک آماده‌ای همچون SimpleCQRS ، دارای پیچیدگی زیاد و باعث نوشتن حجم زیادی کد می‌شود.
