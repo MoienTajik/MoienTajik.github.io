@@ -272,6 +272,29 @@ Install-Package MediatR  بعد از نصب نیاز داریم تا نیازم�
 						<a href="/posts/2019-01-19-mediator-design-pattern/">مطالعه بیشتر ...</a>
 					</div>
 				
+			</div><hr><div class="post">
+				<h1 class="post-title postTitle">
+					<a href="/posts/2018-11-09-aspnetcore-route-constraints/">قیود مسیریابی در ASP.NET Core</a>
+					
+				</h1>
+				
+				<span class="post-date">
+					<i class="fas fa-calendar-alt"></i> 
+					<span class="subtitle">
+						<script>
+							document.write("تاریخ انتشار : " + JDate("11/09/2018").toString());
+						</script>
+					</span>
+				</span>
+				Route Constraints قابلیتی است در ASP.NET Core که با استفاده از آن میتوانید از رسیدن مقادیر نامعتبر به پارامترهای Action متد یک Controller جلوگیری کنید.
+بعنوان مثال میتوانید محدودیتی قرار دهید که Routing فقط زمانی انجام شود که پارامتر وارد شده توسط کاربر، از جنس int باشد:
+[Route(&quot;api/[controller]&quot;)] public class ValuesController : ControllerBase { [HttpGet(&quot;{id:int}&quot;)] public IActionResult Get(int id) { return Ok(id); } }  با قرار دادن یک Break-point در ابتدای اکشن متد، اگر سعی کنید این اکشن متد را با یک alpha string فراخوانی کنید، خواهید دید که به Break-point نرسیده و عمل Routing انجام نمیشود.
+
+				
+					<div class="read-more-link">
+						<a href="/posts/2018-11-09-aspnetcore-route-constraints/">مطالعه بیشتر ...</a>
+					</div>
+				
 			</div><hr>
 	</div>
 	
