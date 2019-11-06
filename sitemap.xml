@@ -66,6 +66,13 @@
   </url>
   
   <url>
+    <loc>/posts/2018-07-05-debuggertypeproxy/</loc>
+    <lastmod>2018-07-05T00:00:00+03:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>/tags/c#/</loc>
     <lastmod>2019-10-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -208,6 +215,27 @@
   <url>
     <loc>/tags/versioning/</loc>
     <lastmod>2018-11-09T00:00:00+03:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/debug/</loc>
+    <lastmod>2018-07-05T00:00:00+03:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/debugger/</loc>
+    <lastmod>2018-07-05T00:00:00+03:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/visualstudio/</loc>
+    <lastmod>2018-07-05T00:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
