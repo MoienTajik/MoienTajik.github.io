@@ -88,7 +88,7 @@ Install-Package MediatR  بعد از نصب نیاز داریم تا نیازم�
     <item>
       <title>API Versioning in ASP.NET Core</title>
       <link>/posts/2018-11-12-aspnetcore-api-versioning/</link>
-      <pubDate>Fri, 09 Nov 2018 00:00:00 +0330</pubDate>
+      <pubDate>Mon, 12 Nov 2018 00:00:00 +0330</pubDate>
       
       <guid>/posts/2018-11-12-aspnetcore-api-versioning/</guid>
       <description>حتما درباره الزامات استفاده‌ از API Versioning خوانده ایم. همانطور که میدانیم ، پیاده سازی Versioning در ASP.NET Web API کاری دشوار و زمانبر بود؛ اما در ASP.NET Core انجام تمامی آن مراحل، در یک خط صورت می‌گیرد که در ادامه آن را بررسی میکنیم.
@@ -117,6 +117,17 @@ Install-Package Microsoft.AspNetCore.Mvc.Versioning  بعد از نصب، کاف
 کلاس زیر را در نظر بگیرید:
 public class Data { public string Name { get; set; } public string ValueInHex { get; set; } }  پس از اجرای برنامه ، مقادیر کلاس ایجاد شده به این صورت خواهند بود :
 در اینجا مقدار Hex برایمان قابل فهم نیست.</description>
+    </item>
+    
+    <item>
+      <title>تولید اطلاعات تصادفی توسط GenFu</title>
+      <link>/posts/2018-07-03-genfu/</link>
+      <pubDate>Tue, 03 Jul 2018 00:00:00 +0330</pubDate>
+      
+      <guid>/posts/2018-07-03-genfu/</guid>
+      <description>گاها برای تولید اطلاعات تصادفی، خصوصا هنگام نوشتن تست‌ها، زمان زیادی بیهوده تلف شده و حجم زیادی کد اضافه تولید میشود. کتابخانه‌ای بنام GenFu ایجاد شده که وظیفه ایجاد داده‌های تصادفی را بر عهده گرفته‌ است. این کتابخانه متن باز (Open Source) بوده و می‌توانید آن را از مخزن گیت‌هاب دریافت نمایید.
+در مطلب جاری قصد ایجاد اطلاعات تصادفی برای کلاس زیر را داریم :
+public class Person { public int ID { get; set; } public string Firstname { get; set; } public string Lastname { get; set; } public string Email { get; set; } public string PhoneNumber { get; set; } public override string ToString() { return $&amp;quot;{ID}: {Firstname} {Lastname} - {Email} - {PhoneNumber}&amp;quot;; } }  نصب GenFu</description>
     </item>
     
   </channel>

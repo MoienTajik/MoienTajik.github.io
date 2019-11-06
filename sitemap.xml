@@ -53,7 +53,7 @@
   
   <url>
     <loc>/posts/2018-11-12-aspnetcore-api-versioning/</loc>
-    <lastmod>2018-11-09T00:00:00+03:30</lastmod>
+    <lastmod>2018-11-12T00:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -68,6 +68,13 @@
   <url>
     <loc>/posts/2018-07-05-debuggertypeproxy/</loc>
     <lastmod>2018-07-05T00:00:00+03:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/posts/2018-07-03-genfu/</loc>
+    <lastmod>2018-07-03T00:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -186,34 +193,34 @@
   
   <url>
     <loc>/tags/api/</loc>
-    <lastmod>2018-11-09T00:00:00+03:30</lastmod>
+    <lastmod>2018-11-12T00:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/aspnet/</loc>
-    <lastmod>2018-11-09T00:00:00+03:30</lastmod>
+    <lastmod>2018-11-12T00:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/aspnetcore/</loc>
-    <lastmod>2018-11-09T00:00:00+03:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/routing/</loc>
-    <lastmod>2018-11-09T00:00:00+03:30</lastmod>
+    <lastmod>2018-11-12T00:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/versioning/</loc>
+    <lastmod>2018-11-12T00:00:00+03:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/routing/</loc>
     <lastmod>2018-11-09T00:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -236,6 +243,27 @@
   <url>
     <loc>/tags/visualstudio/</loc>
     <lastmod>2018-07-05T00:00:00+03:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/datagenerator/</loc>
+    <lastmod>2018-07-03T00:00:00+03:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/fake/</loc>
+    <lastmod>2018-07-03T00:00:00+03:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/genfu/</loc>
+    <lastmod>2018-07-03T00:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
