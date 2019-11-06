@@ -6,10 +6,20 @@
     <description>Recent content in Mediator on Moien Tajik&#39;s Blog | وبلاگ معین تاجیک</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fa</language>
-    <lastBuildDate>Wed, 06 Nov 2019 22:00:00 +0330</lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2019 23:00:00 +0330</lastBuildDate>
     
 	<atom:link href="/tags/mediator/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>پیاده سازی CQRS توسط MediatR - قسمت چهارم</title>
+      <link>/posts/2019-11-06-mediatr-part-4/</link>
+      <pubDate>Wed, 06 Nov 2019 23:00:00 +0330</pubDate>
+      
+      <guid>/posts/2019-11-06-mediatr-part-4/</guid>
+      <description>در این قسمت قصد داریم به بررسی Behavior‌ ها در فریمورک MediatR بپردازیم. کدهای این قسمت بروزرسانی و از این ریپازیتوری قابل دسترسی است.
+با استفاده از Behavior‌ها امکان پیاده سازی AOP را براحتی خواهید داشت. Behavior‌ها، مانند Filter‌‌ ها در ASP.NET MVC هستند. همانطور که با استفاده از متدهای OnActionExecuting و OnActionExecuted میتوانستیم اعمالی را قبل و بعد از اجرای یک اکشن‌متد انجام دهیم، چنین قابلیتی را با Behavior‌ها در MediatR نیز خواهیم داشت.</description>
+    </item>
     
     <item>
       <title>پیاده سازی CQRS توسط MediatR - قسمت سوم</title>

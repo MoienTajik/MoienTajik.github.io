@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/2019-11-06-mediatr-part-4/</loc>
+    <lastmod>2019-11-06T23:00:00+03:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>/posts/2019-11-06-mediatr-part-3/</loc>
     <lastmod>2019-11-06T22:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -39,56 +46,56 @@
   
   <url>
     <loc>/tags/cqrs/</loc>
-    <lastmod>2019-11-06T22:00:00+03:30</lastmod>
+    <lastmod>2019-11-06T23:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/designpatterns/</loc>
-    <lastmod>2019-11-06T22:00:00+03:30</lastmod>
+    <lastmod>2019-11-06T23:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/eventsourcing/</loc>
-    <lastmod>2019-11-06T22:00:00+03:30</lastmod>
+    <lastmod>2019-11-06T23:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/mediator/</loc>
-    <lastmod>2019-11-06T22:00:00+03:30</lastmod>
+    <lastmod>2019-11-06T23:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/mediatr/</loc>
-    <lastmod>2019-11-06T22:00:00+03:30</lastmod>
+    <lastmod>2019-11-06T23:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-11-06T22:00:00+03:30</lastmod>
+    <lastmod>2019-11-06T23:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2019-11-06T22:00:00+03:30</lastmod>
+    <lastmod>2019-11-06T23:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2019-11-06T22:00:00+03:30</lastmod>
+    <lastmod>2019-11-06T23:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
