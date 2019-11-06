@@ -3,14 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/posts/2019-10-16-csharp-internals-single/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
+    <loc>/posts/2019-11-06-mediatr-part-1/</loc>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>/posts/2019-11-06-mediatr-part-1/</loc>
+    <loc>/posts/2019-10-16-csharp-internals-single/</loc>
     <lastmod>2019-10-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -24,6 +24,62 @@
   </url>
   
   <url>
+    <loc>/tags/cqrs/</loc>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/designpatterns/</loc>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/eventsourcing/</loc>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mediator/</loc>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mediatr/</loc>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>/tags/c#/</loc>
     <lastmod>2019-10-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -31,28 +87,7 @@
   </url>
   
   <url>
-    <loc>/tags/cqrs/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>/tags/csharp/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/designpatterns/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/eventsourcing/</loc>
     <lastmod>2019-10-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -80,34 +115,6 @@
   </url>
   
   <url>
-    <loc>/tags/mediator/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/mediatr/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>/tags/single/</loc>
     <lastmod>2019-10-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -116,13 +123,6 @@
   
   <url>
     <loc>/tags/singleordefault/</loc>
-    <lastmod>2019-10-16T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
     <lastmod>2019-10-16T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

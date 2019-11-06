@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Moien Tajik&#39;s Blog | وبلاگ معین تاجیک</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fa</language>
-    <lastBuildDate>Wed, 16 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>پیاده سازی CQRS توسط MediatR - قسمت اول</title>
+      <link>/posts/2019-11-06-mediatr-part-1/</link>
+      <pubDate>Wed, 06 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2019-11-06-mediatr-part-1/</guid>
+      <description>پیاده سازی الگو CQRS هرچند با فریمورک آماده‌ای همچون SimpleCQRS ، دارای پیچیدگی زیاد و باعث نوشتن حجم زیادی کد می‌شود.
+فریمورک MediatR توسط توسعه دهنده کتابخانه‌ی محبوب AutoMapper ایجاد شده‌است. این فریمورک پیاده سازی کاملی از الگوی طراحی Mediator در NET. است که داخل خود، تمام پیچیدگی‌های پیاده سازی CQRS را Abstract کرده و با حداقل کد ممکن، می‌توانید براحتی CQRS را داخل پروژه‌ خود پیاده سازی کنید.</description>
+    </item>
     
     <item>
       <title>C# Internals - Single and SingleOrDefault</title>
@@ -19,16 +29,6 @@
       <guid>/posts/2019-10-16-csharp-internals-single/</guid>
       <description>بسیاری از افراد ، گاهی اوقات از متدهای First و FirstOrDefault در LINQ بعنوان جایگزین Single و SingleOrDefault استفاده میکنند ، با این منطق که Single &amp;ldquo;تمام&amp;rdquo; آیتم های یک Enumerable را پیمایش میکند تا نتیجه را یافت کند ، اما First و FirstOrDefault نیاز به پیمایش تمام آیتم های یک Enumerable را ندارند ، در نتیجه سریع تر هستند.
 جدا از اینکه جابه‌جایی استفاده از Single و First در اکثر مواقع امکان پذیر نیست و این دو متد ، نمیتوانند جایگزین یکدیگر باشند و کارایی متفاوتی دارند ، اما بعضی اوقات قابل جابه‌جا شدن نیز هستند.</description>
-    </item>
-    
-    <item>
-      <title>پیاده سازی CQRS توسط MediatR - قسمت اول</title>
-      <link>/posts/2019-11-06-mediatr-part-1/</link>
-      <pubDate>Wed, 16 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/2019-11-06-mediatr-part-1/</guid>
-      <description>پیاده سازی الگو CQRS هرچند با فریمورک آماده‌ای همچون SimpleCQRS ، دارای پیچیدگی زیاد و باعث نوشتن حجم زیادی کد می‌شود.
-فریمورک MediatR توسط توسعه دهنده کتابخانه‌ی محبوب AutoMapper ایجاد شده‌است. این فریمورک پیاده سازی کاملی از الگوی طراحی Mediator در NET. است که داخل خود، تمام پیچیدگی‌های پیاده سازی CQRS را Abstract کرده و با حداقل کد ممکن، می‌توانید براحتی CQRS را داخل پروژه‌ خود پیاده سازی کنید.</description>
     </item>
     
     <item>

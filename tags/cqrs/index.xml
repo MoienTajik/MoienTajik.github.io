@@ -6,7 +6,7 @@
     <description>Recent content in CQRS on Moien Tajik&#39;s Blog | وبلاگ معین تاجیک</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fa</language>
-    <lastBuildDate>Wed, 16 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/cqrs/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>پیاده سازی CQRS توسط MediatR - قسمت اول</title>
       <link>/posts/2019-11-06-mediatr-part-1/</link>
-      <pubDate>Wed, 16 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 06 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>/posts/2019-11-06-mediatr-part-1/</guid>
       <description>پیاده سازی الگو CQRS هرچند با فریمورک آماده‌ای همچون SimpleCQRS ، دارای پیچیدگی زیاد و باعث نوشتن حجم زیادی کد می‌شود.
