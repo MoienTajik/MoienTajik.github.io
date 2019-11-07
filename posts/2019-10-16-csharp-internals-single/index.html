@@ -172,7 +172,7 @@
 
 <li><p>در صورتی که تعداد آیتم ها بیشتر از یک باشد ، خطا صادر میشود.</p>
 
-<pre><code class="language-C#">public static TSource SingleOrDefault&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source)
+<pre><code class="language-csharp">public static TSource SingleOrDefault&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source)
 {
 if (source == null)
 throw Error.ArgumentNull(nameof (source));
@@ -217,7 +217,7 @@ throw Error.MoreThanOneElement();
 
 <li><p>در صورتی که آیتمی مشابه با آیتم اول پیدا نشود ، همان آیتم اول برگشت داده خواهد شد.</p>
 
-<pre><code class="language-C#">public static TSource SingleOrDefault&lt;TSource&gt;(
+<pre><code class="language-csharp">public static TSource SingleOrDefault&lt;TSource&gt;(
   this IEnumerable&lt;TSource&gt; source,
   Func&lt;TSource, bool&gt; predicate)
 {
