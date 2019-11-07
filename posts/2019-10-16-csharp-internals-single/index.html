@@ -169,43 +169,44 @@
 <ul>
 <li>در صورتی که تعداد آیتم ها صفر باشد ، مقدار پیشفرض نوع <strong>T</strong> برگشت داده میشود.</li>
 <li>در صورتی که تعداد آیتم ها برابر یک باشد ، آیتم <strong>[0]</strong> اون Enumerable برگشت داده میشود.</li>
+<li>در صورتی که تعداد آیتم ها بیشتر از یک باشد ، خطا صادر میشود.</li>
+</ul>
 
-<li><p>در صورتی که تعداد آیتم ها بیشتر از یک باشد ، خطا صادر میشود.</p>
+<p><br></p>
 
 <pre><code class="language-csharp">public static TSource SingleOrDefault&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source)
 {
-if (source == null)
-throw Error.ArgumentNull(nameof (source));
+  if (source == null)
+    throw Error.ArgumentNull(nameof (source));
     
-if (source is IList&lt;TSource&gt; sourceList)
-{
-switch (sourceList.Count)
-{
-  case 0:
-    return default (TSource);
+  if (source is IList&lt;TSource&gt; sourceList)
+  {
+    switch (sourceList.Count)
+    {
+      case 0:
+        return default (TSource);
         
-  case 1:
-    return sourceList[0];
-}
-}
-else
-{
-using (IEnumerator&lt;TSource&gt; enumerator = source.GetEnumerator())
-{
-  if (!enumerator.MoveNext())
-    return default (TSource);
+      case 1:
+        return sourceList[0];
+    }
+  }
+  else
+  {
+    using (IEnumerator&lt;TSource&gt; enumerator = source.GetEnumerator())
+    {
+      if (!enumerator.MoveNext())
+        return default (TSource);
         
-  TSource current = enumerator.Current;
+      TSource current = enumerator.Current;
       
-  if (!enumerator.MoveNext())
-    return current;
-}
-}
+      if (!enumerator.MoveNext())
+        return current;
+    }
+  }
   
-throw Error.MoreThanOneElement();
+  throw Error.MoreThanOneElement();
 }
-</code></pre></li>
-</ul>
+</code></pre>
 
 <hr />
 
@@ -214,42 +215,43 @@ throw Error.MoreThanOneElement();
 <ul>
 <li>در صورتی که آیتمی مطابق با Predicate پیدا نشود ، مقدار پیشفرض T برگشت داده میشود.</li>
 <li>اگر یک آیتم پیدا شود ، پیمایش ادامه پیدا میکند. اگر آیتم مشابه دیگری یافت شود ، به محض رسیدن به آن آیتم ، خطا صادر میشود. ممکن است آیتم مشابه ، آیتم بعدی بوده ( 1+ ) و یا آیتم N ام از Enumerable در حال پیمایش باشد ( N+1 ).</li>
+<li>در صورتی که آیتمی مشابه با آیتم اول پیدا نشود ، همان آیتم اول برگشت داده خواهد شد.</li>
+</ul>
 
-<li><p>در صورتی که آیتمی مشابه با آیتم اول پیدا نشود ، همان آیتم اول برگشت داده خواهد شد.</p>
+<p><br></p>
 
 <pre><code class="language-csharp">public static TSource SingleOrDefault&lt;TSource&gt;(
-  this IEnumerable&lt;TSource&gt; source,
-  Func&lt;TSource, bool&gt; predicate)
+      this IEnumerable&lt;TSource&gt; source,
+      Func&lt;TSource, bool&gt; predicate)
 {
-if (source == null)
-throw Error.ArgumentNull(nameof (source));
+  if (source == null)
+    throw Error.ArgumentNull(nameof (source));
     
-if (predicate == null)
-throw Error.ArgumentNull(nameof (predicate));
+  if (predicate == null)
+    throw Error.ArgumentNull(nameof (predicate));
     
-using (IEnumerator&lt;TSource&gt; enumerator = source.GetEnumerator())
-{
-while (enumerator.MoveNext())
-{
-  TSource current = enumerator.Current;
-      
-  if (predicate(current))
+  using (IEnumerator&lt;TSource&gt; enumerator = source.GetEnumerator())
   {
     while (enumerator.MoveNext())
     {
-      if (predicate(enumerator.Current))
-        throw Error.MoreThanOneMatch();
-    }
+      TSource current = enumerator.Current;
+      
+      if (predicate(current))
+      {
+        while (enumerator.MoveNext())
+        {
+          if (predicate(enumerator.Current))
+            throw Error.MoreThanOneMatch();
+        }
         
-    return current;
+        return current;
+      }
+    }
   }
-}
-}
   
-return default (TSource);
+  return default (TSource);
 }
-</code></pre></li>
-</ul>
+</code></pre>
 
 <hr />
 
