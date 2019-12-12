@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fa" class="wf-firasans-n4-active wf-active">
+	<head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Enable responsiveness on mobile devices -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+
+<meta name="generator" content="Hugo 0.57.2" />
+
+<title>Garbage Collector در CSharp - قسمت دوم &middot; Moien Tajik&#39;s Blog | وبلاگ معین تاجیک</title>
+<meta content="Moien Tajik" property="og:site_name">
+<meta content="Garbage Collector در CSharp - قسمت دوم - Moien Tajik&#39;s Blog | وبلاگ معین تاجیک"
+ property="og:title">
+<meta content="در این سری مقالات قصد داریم وارد مبحث Memory Management در #C شده، با Garbage Collector آشنا و دیدی کلی از نحوه انجام کار آن داشته باشیم. " property="og:description">
+<meta content="/img/posts/2019-11-29-GC-Part-2/Heap.jpg" property="og:image">
+<!-- CSS -->
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i|Roboto+Mono:300,300i,400,400i" rel="stylesheet">
+<style media="print">
+	.sidebar{display:none!important}.container,.content{width:100%;float:none;display:initial;margin:0 auto}.container{padding-left:1rem;padding-right:1rem}
+</style>
+<link rel="stylesheet" href="/css/poole.css">
+<link rel="stylesheet" href="/css/hyde.css">
+<link rel="stylesheet" href="/css/custom.css">
+
+<!-- Font-Awesome -->
+<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+ crossorigin="anonymous"></script>
+<!-- highlight.js-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css">
+<script src="/js/tarikh.js"></script>
+ <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<!-- Icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/favicon.png">
+
+	</head>
+    <body class="theme-base-te ">
+        <div class="sidebar">
+  <div class="container text-center ">
+    <div class="sidebar-about text-center">
+       <img src="/img/Moien%20Tajik.png" alt="Moien Tajik's Image" class="img-circle headshot center"> 
+	  <a href="/" class="no-decoration"><h1 class="brand">معین تاجیک</h1></a>
+      <p class="lead">
+         توسعه دهنده نرم افزار 
+      </p>
+    </div>
+    
+<div>
+	<ul class="sidebar-nav">
+		
+		
+				<li>
+					<a href="/"> <span>خانه</span></a>
+				</li>
+				<li>
+					<a href="/posts/"> <span>مقالات</span></a>
+				</li>
+				<li>
+					<a href="/tags/"> <span>تگ ها</span></a>
+				</li>
+		</li>
+	</ul>
+</div>
+
+    <p>
+      <section class="row text-center">
+	
+	<a href="https://twitter.com/MoienTajik"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	&nbsp;<a href="https://github.com/MoienTajik"><i class="fab fa-github fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	
+	
+	&nbsp;<a href="https://linkedin.com/in/MoienTajik"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a>
+	
+	
+	&nbsp;<a href="https://stackoverflow.com/story/moientajik"><i class="fab fa-stack-overflow fa-lg" aria-hidden="true"></i></a>
+	
+	
+	&nbsp;<a href="https://medium.com/@MoienTajik"><i class="fab fa-medium fa-lg" aria-hidden="true"></i></a>
+	
+	
+	
+	&nbsp;<a href="https://keybase.io/moientajik"><i class="fab fa-keybase fa-lg" aria-hidden="true"></i></a>
+	
+	
+	&nbsp;<a href="mailto:moientajik@hotmail.com"><i class="fas fa-at fa-lg" aria-hidden="true"></i></a>
+	
+</section>
+
+    </p>
+    <p class="copyright">&copy; 2019 Moien Tajik.
+      <a href="https://creativecommons.org/licenses/by/4.0">All rights reserved</a>.<br/>Built with <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/htr3n/hyde-hyde">hyde-hyde</a>
+    </p>
+  </div>
+  <div>
+  </div>
+</div>
+
+        <div class="content container">
+            <div class="post" dir="rtl">
+  <h1 class="postTitle">Garbage Collector در CSharp - قسمت دوم</h1>
+  
+  <div class="col-sm-12 col-md-12">
+    <span class="text-left post-date meta">
+            
+       
+        <i class="fas fa-calendar-alt"></i> <span id="shamsiDate" class="subtitle"></span>
+		<script>
+			let shamsiDate = JDate("12/12/2019").toString();
+			document.getElementById("shamsiDate").innerText = "تاریخ انتشار : " + shamsiDate;
+		</script>
+      
+      
+      
+        
+        
+            <br/>
+             <i class="fas fa-tags"></i>
+			تگ ها :
+            ,
+            <a class="meta" href="/tags/c">c#</a> 
+        ,
+            <a class="meta" href="/tags/csharp">csharp</a> 
+        ,
+            <a class="meta" href="/tags/garbage-collector">garbage collector</a> 
+        ,
+            <a class="meta" href="/tags/gc">gc</a>
+        
+      
+      
+      <br/>
+      <i class="fas fa-clock"></i> <span class="subtitle">زمان حدودی مطالعه : 9 دقیقه</span>
+      </span>  
+  </div><hr>    
+  
+  
+
+<p>در این مطلب قصد داریم به تفاوت‎های بین Stack و Heap در Memory و زبان #C بپردازیم.</p>
+
+<p>به زبان ساده، وقتی شما متغیر جدیدی ایجاد میکنید، با توجه به نوع (Type) آن متغیر، <strong>&ldquo;مقدار&rdquo;</strong> متغیر شما در Stack یا Heap قرار خواهد گرفت.</p>
+
+<hr />
+
+<h2 id="stack">Stack</h2>
+
+<p>Stack نوعی ساختمان داده است که در آن، داده‌ها بصورت خطی قرار گرفته و اصطلاحا ساختار  <strong>LIFO</strong> ( مخفف Last in, First Out ) دارند، بدین معنی که همیشه آخرین داده ای که داخل Stack قرار داده اید، اولین داده ای است که قادر به خواندن آن خواهید بود. وقتی در ساختار Stack داده ای را قرار میدهیم، اصطلاحا آن را  <strong>Push</strong> کرده و وقتی میخواهیم آخرین داده را با توجه به ساختار خطی آن بخوانیم، داده را  <strong>Pop</strong> میکنیم.</p>
+
+<p><br>
+<img src="/img/posts/2019-12-12-GC-Part-2/Stack.png" height="450px" alt="Stack" style="margin:auto;">
+<br></p>
+
+<p>این ساختمان داده داخل Memory پیاده سازی شده است و تعدادی از متغیرهایی که ما داخل کد ایجاد میکنیم، در این نوع ساختمان داده از Memory نگه داری میشوند.</p>
+
+<p>شرط قرار گرفتن مقدار یک متغیر داخل Stack این است که متغیر از نوع Value Type باشد. در زبان #C، بطور کلی Struct و Enum‌ها Value Type هستند و بصورت پیشفرض داخل Stack قرار میگیرند. تمامی ValueType‌ها در #C، بطور implicit از <a href="https://docs.microsoft.com/en-us/dotnet/api/system.valuetype?view=netframework-4.8">System.ValueType</a> ارث بری میکنند.</p>
+
+<p>Type‌های زیر، Value Type‌های پیشفرض تعریف شده در زبان #C هستند که به آن‌ها Simple Type نیز گفته میشوند:</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">Type</th>
+<th align="center">Represents</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">bool</td>
+<td align="center">Boolean value</td>
+</tr>
+
+<tr>
+<td align="center">integer</td>
+<td align="center">8-bit unsigned integer</td>
+</tr>
+
+<tr>
+<td align="center">char</td>
+<td align="center">16-bit Unicode character</td>
+</tr>
+
+<tr>
+<td align="center">decimal</td>
+<td align="center">128-bit precise decimal values with 28-29 significant digits</td>
+</tr>
+
+<tr>
+<td align="center">double</td>
+<td align="center">64-bit double-precision floating point type</td>
+</tr>
+
+<tr>
+<td align="center">float</td>
+<td align="center">32-bit single-precision floating point type</td>
+</tr>
+
+<tr>
+<td align="center">int</td>
+<td align="center">32-bit signed integer type</td>
+</tr>
+
+<tr>
+<td align="center">long</td>
+<td align="center">64-bit signed integer type</td>
+</tr>
+
+<tr>
+<td align="center">sbyte</td>
+<td align="center">8-bit signed integer type</td>
+</tr>
+
+<tr>
+<td align="center">short</td>
+<td align="center">16-bit signed integer type</td>
+</tr>
+
+<tr>
+<td align="center">uint</td>
+<td align="center">32-bit unsigned integer type</td>
+</tr>
+
+<tr>
+<td align="center">ulong</td>
+<td align="center">64-bit unsigned integer type</td>
+</tr>
+
+<tr>
+<td align="center">ushort</td>
+<td align="center">16-bit unsigned integer type</td>
+</tr>
+</tbody>
+</table>
+
+<p>اگر سورس هرکدام از این تایپ‌ها مانند <a href="https://github.com/dotnet/coreclr/blob/master/src/System.Private.CoreLib/shared/System/Int32.cs">Int32</a> را در ریپازیتوری CoreFX مایکروسافت بررسی کنید، متوجه خواهید شد که تمامی این تایپ‌ها از نوع Struct تعریف شده اند و همانطور که گفتیم، بطور پیشفرض Struct‌ها داخل Stack قرار خواهند گرفت.</p>
+
+<p><strong>طول عمر</strong>  متغیرهایی که داخل Stack قرار گرفته اند، منحصر به پایان اجرای یک متد است. بدین معنی که بعد از به پایان رسیدن یک متد، تمامی متغیرهای مورد استفاده در آن متد، از حافظه Stack بطور خودکار حذف خواهند شد. متغیرهایی که داخل Stack قرار میگیرند، نوع و حجم مقادیرشان بر اساس Type ای دارند، در زمان Compile-Time مشخص است.</p>
+
+<p>متغیرهای محلی (Local Variable ها)، پارامترهای ورودی متد و مقدار بازگشتی یک متد، جز مواردی هستند که مقادیرشان داخل Stack قرار میگیرد:</p>
+
+<pre><code class="language-csharp">public static int Add(int number1, int number2)
+{
+    // number1 is on the stack (function parameter)
+    // number2 is on the stack (function parameter)
+
+    int sum = number1 + number2;
+    // sum is on the stack (local variable)
+
+    return sum;
+}
+</code></pre>
+
+<p><br>
+در زبان #C و در مرحله Compile-Time، کدها به زبان IL (مخفف Intermediate Language) ترجمه میشوند که با نام‌های MSIL (مخفف Microsoft Intermediate Language ) و CIL (مخفف Common Intermediate Language ) نیز، این زبان شناخته میشود. ساختار این زبان Stack-based بوده و با شناخت آن، با مفهوم Stack نیز بهتر میتوانیم آشنا شویم.</p>
+
+<p>IL زبانی است که  <em>CLR</em>  (مخفف Common Language Runtime) که همان Runtime مایکروسافت است، شناخته و اجرا میکند. قابل ذکر است که Runtime مایکروسافت Open-Source بوده و سورس آن با نام  <em>CoreCLR</em>  در گذشته از <a href="https://github.com/dotnet/coreclr">این آدرس</a> و در حال حاضر با نام  <em>Runtime</em>  از <a href="https://github.com/dotnet/runtime">این آدرس</a> قابل دسترسی است.</p>
+
+<p>با استفاده از برنامه هایی مانند <a href="https://www.jetbrains.com/decompiler">dotPeek</a> یا <a href="https://github.com/0xd4d/dnSpy">dnSpy</a> یا <a href="https://docs.microsoft.com/en-us/dotnet/framework/tools/ildasm-exe-il-disassembler">ILDASM</a> یا ابزار آنلاینی مانند <a href="https://sharplab.io/">Sharplab</a> و &hellip; میتوانید کدهای IL حاصل از dll‌های برنامه خود را ببینید. این ابزارها با یکدیگر تفاوت زیادی ندارند و تنها مزیت dnSpy به نسبت بقیه، قابلیت دیباگ کردن کدهای IL توسط آن میباشد و همچنین ILDASM با نصب Visual Studio، از این مسیر بدون نیاز به نصب برنامه اضافه ای قابل دسترسی است:</p>
+
+<pre><code class="language-csharp">C:\Program Files (x86)\Microsoft SDKs\Windows\{version}\Bin\ildasm.exe
+</code></pre>
+
+<p><br>
+همانطور که پیش‌تر گفتیم، طول عمر Stack محدود به پایان یک متد است. به این نوع Stack که هنگام صدا زدن یک متد ایجاد میشود و شامل ورودی‌های متد، متغیرهای محلی و آدرس خروجی هستند، Stack Frame یا Activation Frame گفته میشود.</p>
+
+<p><br>
+<img src="/img/posts/2019-12-12-GC-Part-2/Stack-Structure.png" height="400px" alt="Stack Structure" style="margin:auto;">
+<br></p>
+
+<p>اگر متد Add بالا را با پارامترهای 2 و 5 صدا بزنیم، خروجی IL حاصل از آن، که این دو عدد را بعنوان ورودی گرفته و جمع آنها را بعنوان خروجی میدهد، به این صورت خواهد بود ( قسمت هایی از خروجی جهت سادگی، حذف شده است) :</p>
+
+<pre><code class="language-csharp">.method private hidebysig static int32 Add(int32 number1, int32 number2) cil managed
+{
+  .locals init (int32 V_0, int32 V_1)
+
+  IL_0001:  ldarg.0 // Stack is: [2]
+  IL_0002:  ldarg.1 // Stack is: [2, 5]
+  IL_0003:  add     // Stack is: [7]
+  IL_0004:  stloc.0 // Stack is: [] and V_0's value is: 7
+
+  IL_0005:  ldloc.0 // Stack is: [7]
+  IL_0006:  stloc.1 // Stack is: [] and V_1's value is: 7
+
+  IL_0009:  ldloc.1 // Stack is: [7]
+  IL_000a:  ret     // Return [7]
+}
+</code></pre>
+
+<p>میتوانید لیست دستورات مورد استفاده در CIL را <a href="https://en.wikipedia.org/wiki/List_of_CIL_instructions">از اینجا</a> ببینید.</p>
+
+<p>در ادامه، خط به خط، خروجی حاصل را بررسی میکنیم:</p>
+
+<p>1- در زبان IL، میتوانید مقادیر حاصل از اعمال محاسباتی یا متدهای دیگر را داخل متغیرهای محلی ذخیره کنید، به شرط اینکه آنها را در ابتدا مشخص سازید.</p>
+
+<p>&nbsp; &nbsp; • با استفاده از  <strong>locals.</strong>  که به معنای local variables است، میتوانید متغیرهای مورد نیازتان در طول عمر این متد را معرفی کنید. دادن نام برای این متغیرها <a href="https://docs.microsoft.com/en-us/dotnet/api/system.reflection.localvariableinfo?redirectedfrom=MSDN&amp;view=netframework-4.8#remarks">اجباری نیست</a> (V_0 و V_1) و صرفا جهت خوانایی استفاده میشوند.</p>
+
+<p>2- از کلمه کلیدی  <strong>ldarg</strong> (مخفف Load Argument) برای لود کردن آرگومان یا همان پارامتر ورودی متد، داخل Stack استفاده میشود.<br />
+&nbsp; &nbsp; • ldarg.0 به معنای لود کردن پارامتر ورودی اول، داخل Stack است و با فراخوانی آن، Stack Frame دارای یک عضو که مقدار آن 2 است، میشود.</p>
+
+<p>&nbsp; &nbsp; • ldarg.1 به معنای لود کردن پارامتر ورودی دوم، داخل Stack است و با فراخوانی آن، Stack Frame دارای دو عضو که مقادیر آن 2 و 5 است، میشود.</p>
+
+<p>3- با استفاده از کلمه کلیدی  <strong>add</strong>، مقادیر موجود در Stack با یکدیگر جمع میشوند و Stack Frame دارای یک عضو که مقدار آن 7 است، میشود.</p>
+
+<p>4- با استفاده از کلمه کلیدی  <strong>stloc</strong> (مخفف Store Local)، آخرین عضو موجود در Stack، داخل متغیر محلی ذکر شده، قرار گرفته و ذخیره میشود.</p>
+
+<p>&nbsp; &nbsp; • stloc.0 به معنای ذخیره سازی آخرین مقدار موجود در Stack یعنی عدد 7، داخل متغیر 0 یعنی همان V_0 میباشد.</p>
+
+<p>5- با استفاده از کلمه کلیدی  <strong>ldloc</strong> (مخفف Load Local)، میتوان متغیر محلی ذخیره شده را داخل Stack قرار داد.</p>
+
+<p>&nbsp; &nbsp; • ldloc.0 به معنای Load کردن مقدار ذخیره شده متغیر محلی 0 که همان V_0 است، داخل Stack میباشد.</p>
+
+<p>6- در نهایت، مقدار 7، داخل متغیر 1 یا همان V_1 با دستور stloc.1 بار دیگر ذخیره، با ldloc.1 لود شده و با استفاده از دستور  <strong>ret</strong>، برگشت داده میشود.</p>
+
+<p><strong>* نکته:</strong> اگر کدها را بطور دقیق بررسی کرده باشید، احتمالا فکر کرده اید که چه نیازی به ایجاد یک متغیر اضافی و ریختن نتیجه داخل آن و سپس برگشت دادن نتیجه، در مرحله 6 است؟!</p>
+
+<p>در زبان #C، کدهای شما در زمان Release و همچنین JIT-Compilation، طی چندین مرحله Optimize میشوند و یکی از این مراحل، حذف این متغیرهای اضافی جهت Optimization و Performance است; پس از این بابت نگرانی وجود ندارد.</p>
+
+<p><strong>* نکته:</strong> احتمالا تا به اینجا دلیل بوجود آمدن  <strong>StackOverflowException</strong>  را متوجه شده باشید. فضای Stack محدود است. این فضا در سیستم‌های 32 بیت برابر با 1 مگابایت و در سیستم‌های 64 بیت برابر با 4 مگابایت است (<a href="https://stackoverflow.com/a/28658130/6661314">Reference</a>). اگر حجم متغیرهایی که روی استک Push میشوند، این محدودیت را رد کنند و یا اگر یک متد بطور دائم خودش را صدا بزند (Recursive) و هیچگاه از آن خارج نشود، با خطای StackOverflowException مواجه میشوید.</p>
+
+<hr />
+
+<h2 id="heap">Heap</h2>
+
+<p><br>
+<img src="/img/posts/2019-12-12-GC-Part-2/Heap.jpg" height="450px" alt="Heap" style="margin:auto;">
+<div style="text-align: center;">
+    <span style="font-style: italic; text-color: gray;">.Heap: a group of things placed, thrown, or lying one on another</span>
+</div>
+<br></p>
+
+<p>در مقابل ساختار ترتیبی و منظم Stack، ساختار Heap قرار دارد. Heap قسمتی از حافظه هست که ساختار، ترتیب و Layout خاصی ندارد.</p>
+
+<p>این نوع حافظه بر خلاف Stack، منحصر به یک متد نیست و اصطلاحا Global بوده و در هر قسمتی از برنامه قابل دسترسی است. تخصیص حافظه در این قسمت از حافظه اصطلاحا Dynamic بوده و هر نوع داده ای را در هر زمانی میتوان داخل آن ذخیره کرد.</p>
+
+<p>string‌ها نمونه ای از typeهایی هستند که داخل Heap نگه داری میشوند. دقت کنید وقتی میگوییم نگه داری میشود، منظور &ldquo;<strong>مقدار</strong>&rdquo; یک متغیر است.</p>
+
+<p>وقتی یک متغیر از نوع string ایجاد میکنیم، مقدار آن داخل Heap و Memory-Address آن متغیر روی Heap، در Stack نگه داری میشود:</p>
+
+<pre><code class="language-csharp">public static void SayHi()
+{
+    string name = &quot;Moien&quot;;
+}
+</code></pre>
+
+<p><br>
+در این مثال، چون <a href="https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/String.cs">string یک class است</a>، مقدار آن داخل heap ذخیره شده و آدرس آن قسمت (segment) از memory، روی Stack قرار میگیرد:</p>
+
+<pre><code class="language-csharp">.method private hidebysig static void SayHi() cil managed
+{
+  .locals init (string V_0)
+
+  IL_0001:  ldstr      &quot;Moien&quot; // Stack is: [memory-address of string in heap]
+  IL_0006:  stloc.0
+
+  IL_0007:  ret
+}
+</code></pre>
+
+<p>به متغیرهایی که مقادیرشان داخل Heap ذخیره میشوند، Reference-Type گفته میشود.</p>
+
+<p><strong>* نکته:</strong> در این مثال متغیری به نام name ایجاد شده که از آن هیچ استفاده ای نشده است. در زمان JIT-Compilation، با توجه با Optimization‌های موجود در سطح CLR، این متد بطور کلی اضافه تشخیص داده شده و از آن صرف نظر خواهد شد.</p>
+
+<p><br>
+<img src="/img/posts/2019-12-12-GC-Part-2/Heap.png" height="450px" alt="Heap Structure" style="margin:auto;">
+<br></p>
+
+<hr />
+
+<h2 id="boxing-and-unboxing">Boxing and Unboxing</h2>
+
+<p>به فرایند تبدیل یک Value-Type مانند int که بصورت پیشفرض داخل Stack ذخیره میشود، به یک object که در داخل Heap ذخیره میشود،  <strong>Boxing</strong> گفته میشود. انجام این عمل باعث allocation روی memory میشود که سربار زیادی دارد.</p>
+
+<p>با انجام عمل Boxing، قادر خواهیم بود تا بعنوان مثال یک عدد را بر خلاف روال عادی آن، روی Heap ذخیره کنیم:</p>
+
+<pre><code class="language-csharp">public static void Boxing()
+{
+    const int number = 5;
+
+    object boxedNumber = number;          // implicit boxing using implicit cast
+    object boxedNumber = (object)number;  // explicit boxing using direct cast
+}
+</code></pre>
+
+<p><br>
+در ابتدا عدد 5 روی Stack ذخیره شده بود، اما با Box کردن آن، یعنی قرار دادن مقدار آن داخل یک object، مقدار از Stack به Heap انتقال داده شده و allocation اتفاق خواهد افتاد:</p>
+
+<pre><code class="language-csharp">.method public hidebysig static void Boxing() cil managed
+{
+  .locals init (object V_0)
+
+  IL_0001:  ldc.i4.5                                // Stack is: [5]
+  IL_0002:  box        [System.Runtime]System.Int32 // Stack is: [memory-address of 5 in heap]
+
+  IL_0007:  stloc.0
+  IL_0008:  ret
+}
+</code></pre>
+
+<p><br>
+به عکس این عمل، یعنی تبدیل یک Reference-Type به یک Value-Type، اصطلاحا  <strong>Unboxing</strong> گفته میشود:</p>
+
+<pre><code class="language-csharp">public static void Unboxing()
+{
+    object boxedNumber = 5;
+
+    int number = (int)boxedNumber;
+}
+</code></pre>
+
+<p><br>
+که نتیجه آن، به این صورت خواهد بود:</p>
+
+<pre><code class="language-csharp">.method public hidebysig static void Unboxing() cil managed
+{
+  .locals init (object V_0, int32 V_1)
+
+  IL_0001:  ldc.i4.5                                  // Stack is: [5]
+  IL_0002:  box        [System.Runtime]System.Int32   // Stack is: [memory-address of 5 in heap]
+  IL_0007:  stloc.0                                   // Stack is: []
+
+  IL_0008:  ldloc.0                                   // Stack is: [memory-address of 5 in heap]
+  IL_0009:  unbox.any  [System.Runtime]System.Int32   // Stack is: [5]
+  IL_000e:  stloc.1                                   // Stack is: []
+
+  IL_000f:  ret
+}
+</code></pre>
+
+<p>تلاش تیم‌های مایکروسافت طی سال‌های اخیر، باعث افزایش Performance فوق العاده در NET Core. و ASP.NET Core شده است. یکی از دلایل این Performance، جلوگیری بسیار زیاد از allocation در کدهای خود NET. است، که این امر به واسطه اولویت قرار دادن استفاده از Structها میسر گردیده است.</p>
+
+<p>برخلاف Stack که طول عمر متغیرهای موجود در آن، در انتهای یک متد پایان میابند، متغیرهای allocate شده در Heap به این شکل نبوده و در صورت حذف نکردن آنها بصورت دستی، تا پایان طول عمر اجرای برنامه داخل memory باقی خواهند ماند. اینجا، جاییست که  <strong>Garbage Collector</strong>  در NET. وارد عمل میشود.</p>
+
+</div><hr>
+            <div class="footer">
+                <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+
+<script type="text/javascript">
+    hljs.configure({languages: []});
+    hljs.initHighlightingOnLoad();
+</script>
+
+    
+
+        <h2 dir="rtl">نظرات</h2>
+        <div id="disqus_thread"></div>
+<script type="text/javascript">
+      (function () {
+            
+            
+            
+            if (location.hostname === "localhost" || 
+            	location.hostname === "127.0.0.1" || 
+            	location.hostname === "") {
+                return;
+			}
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            var disqus_shortname = 'moientajik';
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(
+                  dsq);
+      })();
+</script>
+
+<noscript>
+	Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+      
+
+            </div>
+        </div>
+        
+        
+    </body>
+</html>

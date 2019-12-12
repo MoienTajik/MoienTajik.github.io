@@ -6,10 +6,21 @@
     <description>Recent content in C# on Moien Tajik&#39;s Blog | وبلاگ معین تاجیک</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fa</language>
-    <lastBuildDate>Fri, 29 Nov 2019 21:00:00 +0330</lastBuildDate>
+    <lastBuildDate>Thu, 12 Dec 2019 23:00:00 +0330</lastBuildDate>
     
 	<atom:link href="/tags/c#/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Garbage Collector در CSharp - قسمت دوم</title>
+      <link>/posts/2019-12-12-gc-part-2/</link>
+      <pubDate>Thu, 12 Dec 2019 23:00:00 +0330</pubDate>
+      
+      <guid>/posts/2019-12-12-gc-part-2/</guid>
+      <description>در این مطلب قصد داریم به تفاوت‎های بین Stack و Heap در Memory و زبان #C بپردازیم.
+به زبان ساده، وقتی شما متغیر جدیدی ایجاد میکنید، با توجه به نوع (Type) آن متغیر، &amp;ldquo;مقدار&amp;rdquo; متغیر شما در Stack یا Heap قرار خواهد گرفت.
+Stack Stack نوعی ساختمان داده است که در آن، داده‌ها بصورت خطی قرار گرفته و اصطلاحا ساختار LIFO ( مخفف Last in, First Out ) دارند، بدین معنی که همیشه آخرین داده ای که داخل Stack قرار داده اید، اولین داده ای است که قادر به خواندن آن خواهید بود.</description>
+    </item>
     
     <item>
       <title>Garbage Collector در CSharp - قسمت اول</title>

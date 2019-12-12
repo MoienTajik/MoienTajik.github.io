@@ -113,6 +113,29 @@
             <div class="posts" dir="rtl">
 		<div class="post">
 				<h1 class="post-title postTitle">
+					<a href="/posts/2019-12-12-gc-part-2/">Garbage Collector در CSharp - قسمت دوم</a>
+					
+				</h1>
+				
+				<span class="post-date">
+					<i class="fas fa-calendar-alt"></i> 
+					<span class="subtitle">
+						<script>
+							document.write("تاریخ انتشار : " + JDate("12/12/2019").toString());
+						</script>
+					</span>
+				</span>
+				در این مطلب قصد داریم به تفاوت‎های بین Stack و Heap در Memory و زبان #C بپردازیم.
+به زبان ساده، وقتی شما متغیر جدیدی ایجاد میکنید، با توجه به نوع (Type) آن متغیر، &ldquo;مقدار&rdquo; متغیر شما در Stack یا Heap قرار خواهد گرفت.
+Stack Stack نوعی ساختمان داده است که در آن، داده‌ها بصورت خطی قرار گرفته و اصطلاحا ساختار LIFO ( مخفف Last in, First Out ) دارند، بدین معنی که همیشه آخرین داده ای که داخل Stack قرار داده اید، اولین داده ای است که قادر به خواندن آن خواهید بود.
+
+				
+					<div class="read-more-link">
+						<a href="/posts/2019-12-12-gc-part-2/">مطالعه بیشتر ...</a>
+					</div>
+				
+			</div><hr><div class="post">
+				<h1 class="post-title postTitle">
 					<a href="/posts/2019-11-29-gc-part-1/">Garbage Collector در CSharp - قسمت اول</a>
 					
 				</h1>
@@ -313,29 +336,6 @@ Install-Package Microsoft.AspNetCore.Mvc.Versioning  بعد از نصب، کاف
 				
 					<div class="read-more-link">
 						<a href="/posts/2018-11-12-aspnetcore-api-versioning/">مطالعه بیشتر ...</a>
-					</div>
-				
-			</div><hr><div class="post">
-				<h1 class="post-title postTitle">
-					<a href="/posts/2018-11-09-aspnetcore-route-constraints/">قیود مسیریابی در ASP.NET Core</a>
-					
-				</h1>
-				
-				<span class="post-date">
-					<i class="fas fa-calendar-alt"></i> 
-					<span class="subtitle">
-						<script>
-							document.write("تاریخ انتشار : " + JDate("11/09/2018").toString());
-						</script>
-					</span>
-				</span>
-				Route Constraints قابلیتی است در ASP.NET Core که با استفاده از آن میتوانید از رسیدن مقادیر نامعتبر به پارامترهای Action متد یک Controller جلوگیری کنید.
-بعنوان مثال میتوانید محدودیتی قرار دهید که Routing فقط زمانی انجام شود که پارامتر وارد شده توسط کاربر، از جنس int باشد:
-[Route(&quot;api/[controller]&quot;)] public class ValuesController : ControllerBase { [HttpGet(&quot;{id:int}&quot;)] public IActionResult Get(int id) { return Ok(id); } }  با قرار دادن یک Break-point در ابتدای اکشن متد، اگر سعی کنید این اکشن متد را با یک alpha string فراخوانی کنید، خواهید دید که به Break-point نرسیده و عمل Routing انجام نمیشود.
-
-				
-					<div class="read-more-link">
-						<a href="/posts/2018-11-09-aspnetcore-route-constraints/">مطالعه بیشتر ...</a>
 					</div>
 				
 			</div><hr>
