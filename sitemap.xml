@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/2020-01-10-gc-part-3/</loc>
+    <lastmod>2020-01-10T20:00:00+03:30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>/posts/2019-12-12-gc-part-2/</loc>
     <lastmod>2019-12-12T23:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
@@ -95,49 +102,49 @@
   
   <url>
     <loc>/tags/c#/</loc>
-    <lastmod>2019-12-12T23:00:00+03:30</lastmod>
+    <lastmod>2020-01-10T20:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/csharp/</loc>
-    <lastmod>2019-12-12T23:00:00+03:30</lastmod>
+    <lastmod>2020-01-10T20:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/garbage-collector/</loc>
-    <lastmod>2019-12-12T23:00:00+03:30</lastmod>
+    <lastmod>2020-01-10T20:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/gc/</loc>
-    <lastmod>2019-12-12T23:00:00+03:30</lastmod>
+    <lastmod>2020-01-10T20:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-12-12T23:00:00+03:30</lastmod>
+    <lastmod>2020-01-10T20:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2019-12-12T23:00:00+03:30</lastmod>
+    <lastmod>2020-01-10T20:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2019-12-12T23:00:00+03:30</lastmod>
+    <lastmod>2020-01-10T20:00:00+03:30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
